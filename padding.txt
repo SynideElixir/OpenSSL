@@ -1,0 +1,13 @@
+echo -n 12345 > f1.txt
+echo -n 1234567890 > f2.txt
+echo -n 1234567890abcdef > f3.txt
+ls -l f*.txt
+
+openssl enc -aes-128-cbc -e -in f1.txt -out f1.bin -k 001122334455667788899aabbccddeeff -iv 0102030405060708090a0b0c0d0e0f
+openssl enc -aes-128-cbc -d -in f1.bin -out p1.txt -k 001122334455667788899aabbccddeeff -iv 0102030405060708090a0b0c0d0e0f
+openssl enc -aes-128-cbc -d -in f1.bin -out p1_nopad.txt -nopad -k 001122334455667788899aabbccddeeff -iv 0102030405060708090a0b0c0d0e0f
+
+$ls -l f*bin
+
+xxd p1.txt
+xxd p1_nopad.txt

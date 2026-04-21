@@ -1,4 +1,4 @@
-seedsecuritylabs.org/Labs_16.04/Crypto/secretkey_encryption/pic_original.bmp
+https://seedsecuritylabs.org/Labs_16.04/Crypto/Crypto_Encryption/files/pic_original.bmp
 
 openssl enc -aes-128-ecb -e -in pic_original.bmp -out pic_ecb.bmp -k 00112233445566778899aabbccddeeff
 openssl enc -aes-128-cbc -e -in pic_original.bmp -out pic_cbc.bmp -k 00112233445566778899aabbccddeeff -iv 0102030405060708090a0b0c0d0e0f
